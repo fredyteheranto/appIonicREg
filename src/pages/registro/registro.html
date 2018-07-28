@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Registrar Usuario</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <form (ngSubmit)="logForm()">
+    <ion-item>
+      <ion-label>Nombre</ion-label>
+      <ion-input type="text" [(ngModel)]="registro.nombre" name="nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Apellido</ion-label>
+      <ion-input type="text" [(ngModel)]="registro.apellido" name="apellido"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Correo</ion-label>
+      <ion-input type="email" [(ngModel)]="registro.correo" name="correo"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>cedula</ion-label>
+      <ion-input type="text" [(ngModel)]="registro.cedula" name="cedula"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Usuario</ion-label>
+      <ion-input type="text" [(ngModel)]="registro.usuario" name="usuario"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label>Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="registro.contrasena" name="contrasena"></ion-input>
+      </ion-item>
+    <div padding>
+      <button ion-button type="submit" block>Registrar</button>
+      <button ion-button block (click)="closeModal()">Close Modal</button>
+    </div>
+  </form>
+</ion-content>
